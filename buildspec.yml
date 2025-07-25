@@ -1,14 +1,8 @@
 version: 0.2
-
-env:
-  shell: shell-tag
-  variables:
-    SONAR_TOKEN: "50828787ce50e9fd02cba6ab37ff48d50c088030"
-
 phases:
   install:
     runtime-versions:
       java: latest
   build:
     commands:
-      - mvn verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=PranavPWN_devops-test
+      - mvn verify sonar:sonar -Dsonar.projectKey=PranavPWN_devops-test -Dsonar.organization=pwn-space -Dsonar.host.url=https://sonarcloud.io -Dsonar.token=a1ac43b1468930ddfe35e239614a284acae3fed9 
