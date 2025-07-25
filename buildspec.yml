@@ -2,7 +2,7 @@ version: 0.2
 phases:
   install:
     runtime-versions:
-      java: latest
+      java: corretto17
   build:
     commands:
       - mvn verify sonar:sonar -Dsonar.projectKey=PranavPWN_devops-test -Dsonar.organization=pwn-space -Dsonar.host.url=https://sonarcloud.io -Dsonar.token=a1ac43b1468930ddfe35e239614a284acae3fed9 
